@@ -2,7 +2,6 @@ import NavBar from "./navBar/NavBar";
 import HeroSection from "./heroSection/HeroSection";
 import Register from "./register/Register";
 import Schedule from "./schedule/Schedule";
-import Celebrations from "./celebrations/Celebrations";
 
 export default function Home() {
   return (
@@ -11,8 +10,6 @@ export default function Home() {
       <HeroSection />
       <Register />
       <Schedule />
-      <Celebrations />
-      {/* <StackImage /> */}
     </>
   );
 }

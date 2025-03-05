@@ -19,10 +19,9 @@ const NavBar = () => {
     { label: "Reserve Your Stay", href: "#reserveYourDay" },
   ];
 
-  // Detect if screen is mobile (`sm` or `md`)
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024); // lg: 1024px
+      setIsMobile(window.innerWidth < 1024);
     };
 
     handleResize();
@@ -30,7 +29,6 @@ const NavBar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Close menu on outside click
   useEffect(() => {
     const handleOutsideClick = (e) => {
       if (menuOpen && !e.target.closest(".menu-container")) {
@@ -62,7 +60,6 @@ const NavBar = () => {
           />
         </div>
 
-        {/* Hamburger Menu Button (Mobile & MD Only) */}
         {isMobile && (
           <div className="lg:hidden">
             <button
@@ -80,13 +77,14 @@ const NavBar = () => {
           </div>
         )}
 
-        {/* Navigation Links (Desktop Only) */}
         {!isMobile && (
           <nav className="text-[#FFF8E6] font-medium text-[16px] font-poppins hidden lg:flex">
             <ul className="xl:gap-6 xl:pr-32 lg:pt-3 gap-4 flex">
-              {navLinks.map((link) => (
+              {navLinks.map((link, index) => (
                 <li key={link.label}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link href={link.href} onClick={() => setMenuOpen(false)}>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -94,17 +92,15 @@ const NavBar = () => {
         )}
       </div>
 
-      {/* Mobile Menu (Animated, Only for `sm` & `md`) */}
       <AnimatePresence>
         {menuOpen && isMobile && (
           <motion.div
             className="fixed top-0 left-0  md:w-[400px] h-full bg-[#79182D] z-50 menu-container"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            exit={{ x: "-100%" }} // Ensures smooth exit animation
+            exit={{ x: "-100%" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            {/* Close Button */}
             <div className="flex justify-between items-center p-6">
               <Image
                 alt="logo"
@@ -118,7 +114,6 @@ const NavBar = () => {
               </button>
             </div>
 
-            {/* Mobile Nav Links */}
             <nav className="mt-6">
               <ul className="flex flex-col text-white text-lg px-6">
                 {navLinks.map((link, index) => (
