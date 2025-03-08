@@ -2,7 +2,7 @@ import React from "react";
 
 const Sadhana = () => {
   return (
-    <div className="mt-10 mx-4 md:mx-10">
+    <div className="my-10 mx-4 md:mx-10">
       <h3 className="text-[40px] text-[#9E1F22] font-crimson text-center font-bold">
         35 Days of Sadhana
       </h3>

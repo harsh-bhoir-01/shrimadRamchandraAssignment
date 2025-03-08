@@ -10,6 +10,7 @@ import celebration5 from "../../../public/celebration5.png";
 import CelebrationsBlock1 from "./CelebrationsBlock1";
 import Sadhana from "./Sadhana";
 import { motion } from "framer-motion";
+import Stay from "../stay/Stay";
 
 const fadeIn = {
   hidden: { opacity: 0, y: -30 },
