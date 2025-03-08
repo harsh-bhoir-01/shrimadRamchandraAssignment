@@ -5,6 +5,8 @@ import celebration2 from "../../../public/celebration2.png";
 import celebration3 from "../../../public/celebration3.png";
 import celebration4 from "../../../public/celebration4.png";
 import celebration5 from "../../../public/celebration5.png";
+import CelebrationsBlock1 from "./CelebrationsBlock1";
+import Sadhana from "./Sadhana";
 
 const Celebrations = () => {
   return (
@@ -50,7 +52,7 @@ const Celebrations = () => {
           {/* div 2 - Takes 2 columns, full height */}
           <div className=" mt-5 md:mt-0  col-span-1 flex flex-col gap-4">
             <div className="relative flex flex-col  rounded-3xl overflow-hidden bg-gradient-to-t from-[#641d29] to-[#ba2124]  gap-4 md:flex-[1.2]">
-              <h3 className="text-[24px] text-white font-inknut font-semibold tracking-wide text-center leading-8 md:text-lg md:pt-5 xl:text-3xl 2xl:text-4xl 2xl:leading-none ">
+              <h3 className="text-[24px] text-white font-inknut font-semibold tracking-wide text-center leading-8 px-4 md:text-lg md:pt-5 xl:text-3xl 2xl:text-4xl 2xl:leading-none ">
                 Raj Katha for Sevarpits by Swadhyaykar
               </h3>
               <Image
@@ -66,7 +68,7 @@ const Celebrations = () => {
                 className="w-full h-full rounded-3xl "
               />
 
-              <p className=" absolute top-6 left-2 text-sm text-white font-poppins p-3.5 font-[500] mr-10 md:mr-0 md:p-0 lg:text-2xl 2xl:text-3xl">
+              <p className=" absolute top-6 left-2 text-lg  text-white font-poppins p-3.5 font-[500] mr-10 md:mr-0 md:p-0 md:text-sm lg:text-2xl 2xl:text-3xl">
                 Exam on Param Krupalu Dev for students from 6th to 8th Std.
               </p>
             </div>
@@ -109,6 +111,8 @@ const Celebrations = () => {
           {/* div 4 - Takes 2 columns, 1 row */}
         </div>
       </div>
+      <CelebrationsBlock1 />
+      <Sadhana />
     </div>
   );
 };
