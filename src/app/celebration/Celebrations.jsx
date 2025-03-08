@@ -12,8 +12,12 @@ import Sadhana from "./Sadhana";
 import { motion } from "framer-motion";
 
 const fadeIn = {
-  hidden: { opacity: 0, y: 200 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, y: -30 },
+  visible: (custom) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeIn", delay: custom * 0.1 },
+  }),
 };
 
 const Celebrations = () => {
@@ -24,6 +28,7 @@ const Celebrations = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+        custom={1}
         className="text-[#9E1F22] font-crimson"
       >
         <h2 className="text-[40px] font-extrabold tracking-widest leading-12 text-center xl:text-5xl">
@@ -39,6 +44,7 @@ const Celebrations = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+        custom={2}
         className="p-6 md:px-12"
       >
         <div className="md:grid grid-cols-3 gap-5 md:mt-5">
@@ -147,6 +153,7 @@ const Celebrations = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+        custom={3}
       >
         <CelebrationsBlock1 />
       </motion.div>
@@ -156,6 +163,7 @@ const Celebrations = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+        custom={4}
       >
         <Sadhana />
       </motion.div>
