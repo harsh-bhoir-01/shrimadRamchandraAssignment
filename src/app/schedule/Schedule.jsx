@@ -14,7 +14,11 @@ const Schedule = () => {
   const translateY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
-    <div ref={targetRef} id="schedule" className="py-16 relative bg-white">
+    <div
+      ref={targetRef}
+      id="schedule"
+      className="py-16 relative bg-white lg:px-20"
+    >
       <h2 className="font-crimson text-[40px] text-[#631019] flex justify-center items-center font-semibold sticky top-0 bg-white z-10">
         Schedule
       </h2>
