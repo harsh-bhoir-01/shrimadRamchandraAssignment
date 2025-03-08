@@ -64,6 +64,7 @@ const Celebrations = () => {
                 alt="celebration1"
                 src={celebration1}
                 className="w-full h-full object-cover"
+                priority
               />
               <div className="absolute top-3 left-4">
                 <h3 className="text-[22px] text-[#631019] font-poppins font-medium p-3.5 lg:text-3xl 2xl:text-5xl">
