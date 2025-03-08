@@ -16,7 +16,7 @@ const ScheduleCard = () => {
       {scheduleData.map((S) => (
         <div
           key={S.date}
-          className="px-8 xl:grid grid-cols-1 xl:grid-cols-[1fr_2fr] xl:max-w-[1200px] 2xl:max-w-[1400px] xl:mx-auto"
+          className="relative px-8 xl:grid grid-cols-1 xl:grid-cols-[1fr_2fr] xl:max-w-[1200px] 2xl:max-w-[1400px] xl:mx-auto"
         >
           <div className="pt-4 xl:flex items-center">
             <motion.div

@@ -41,7 +41,7 @@ const NavBar = () => {
   }, [menuOpen]);
 
   return (
-    <section className="container max-w-full bg-[#631019] py-6">
+    <section className="container max-w-full bg-[#631019] py-6 fixed top-0 ">
       <div className="flex xl:px-20 justify-between px-6 lg:pr-16">
         <div>
           <Image

@@ -8,7 +8,7 @@ import bannerXxl from "../../../public/banner_xxl.png";
 
 const HeroSection = () => {
   return (
-    <div>
+    <div className="mt-20">
       <Image
         alt="banner"
         width={320}

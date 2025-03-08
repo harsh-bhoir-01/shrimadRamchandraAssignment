@@ -11,7 +11,7 @@ const fadeInVariant = {
 
 const ScheduleContainer = ({ events, image }) => {
   return (
-    <div className="p-5 md:p-0 mt-4 bg-[#631019] text-lg font-poppins rounded-3xl md:text-left md:grid grid-cols-2">
+    <div className=" relative p-5 md:p-0 mt-4 bg-[#631019] text-lg font-poppins rounded-3xl md:text-left md:grid grid-cols-2">
       <motion.div
         className="md:flex flex-col justify-center items-center md:pl-7 md:items-start"
         initial="hidden"

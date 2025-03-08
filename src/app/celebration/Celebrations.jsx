@@ -24,7 +24,7 @@ const Celebrations = () => {
   return (
     <motion.div
       id="gaamCelebration"
-      className="relative bg-[#ffefd3] py-16 lg:px-20"
+      className="relative bg-[#ffefd3] py-16 lg:px-20 -z-10 "
     >
       <motion.div
         variants={fadeIn}
