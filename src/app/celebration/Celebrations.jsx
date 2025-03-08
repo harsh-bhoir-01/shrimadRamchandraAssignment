@@ -16,13 +16,16 @@ const fadeIn = {
   visible: (custom) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: "easeIn", delay: custom * 0.1 },
+    transition: { duration: 0.8, ease: "easeOut", delay: custom * 0.1 },
   }),
 };
 
 const Celebrations = () => {
   return (
-    <motion.div id="gaamCelebration" className="bg-[#ffefd3] py-16 lg:px-20">
+    <motion.div
+      id="gaamCelebration"
+      className="relative bg-[#ffefd3] py-16 lg:px-20"
+    >
       <motion.div
         variants={fadeIn}
         initial="hidden"
